@@ -1,0 +1,126 @@
+<html>
+
+<head>
+{% load static %}
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+    <link href="{% static 'StoreOnlineApp/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+     <!-- Fonts -->
+    
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <!-- Styles -->
+    <link href="{% static 'StoreOnlineApp/css/gestion.css' %}" rel="stylesheet">
+ 
+
+</head>
+<style>
+  .ui.fixed.borderless.menu {
+  background-color: #31326f;
+}
+.uno.ui.vertical {
+  background-color: #dbf6e9;
+}
+.tres.ui.vertical {
+  background-color: #31326f;
+}
+.dos.ui.vertical {
+  background-color: #000000;
+}
+</style>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<body >
+  
+  <script>
+    AOS.init();
+    </script>
+
+ <!-- Navbar -->
+ <div class="ui fixed borderless huge inverted  menu ">
+  <a class="header item" href="{% url 'home' %}">
+    <img class=" " src="{% static 'StoreOnlineApp/img/ICONO.png' %}" style="width: 150px;height: 70px;" alt="">
+  </a>
+    <div class="right menu">
+      
+      <a class="item"  href="{% url 'home' %}">Servicios</a>
+      <a class="item" href="{% url 'productos' %}">Productos</a>
+      <a class="item" href="{% url 'sabores' %}">Sabores</a>
+      <a class="item" href="{% url 'blog' %}">Blog</a>
+      <a class="item"  href="{% url 'servicios' %}">Login</a>
+     
+   
+                          
+                        
+        <a  class="item" href="https://www.facebook.com/aranciahelados"  target="_blank"  style="color:black"  onmouseover="this.style.color='#28527A'" onmouseout="this.style.color='black'"  >  <i class="fab fa-facebook-square" style="size: 7px;"></i></a>                   
+       
+           <a  class="item" href="https://www.instagram.com/aranciahelados/?hl=es-la" target="_blank" style="color:black"  onmouseover="this.style.color='#af0069'" onmouseout="this.style.color='black'"  > <i class="fab fa-instagram" style="size: 7px;"></i> </a>                       
+        
+      
+           <a class="item"  href="https://api.whatsapp.com/send?phone=543884762569&data=AbsqGK12tKPUd0-TruHAgp4WjI681Z_ti2rFyzbJu_U-72dTyIkzXUS9oGQ7l5n5ptTDNEa1M1FkYgX43Pxuh6JyqHU1bOkOrl7pWjLz7FAXvSP9B04NjXAURDx5lM-V-6E&source=FB_Ads" target="_blank" style="color:black"  onmouseover="this.style.color='#81b214'" onmouseout="this.style.color='black'"  > <i class="fab fa-whatsapp"  style="size: 7px;"></i> </a>
+      
+           <a  class="item" href="https://www.google.com.ar/maps/place/Heladeria+Artesanal+Arancia/@-24.210728,-65.2675737,19.5z/data=!4m7!3m6!1s0x941b061219816c53:0x73641e0e29ad0a47!8m2!3d-24.2105658!4d-65.2672709!9m1!1b1"  target="_blank" style="color:black"  onmouseover="this.style.color='#ffcc29'" onmouseout="this.style.color='black'" > <i class="fas fa-map-marked-alt" style="size: 7px;"></i></a>
+    
+           </div>
+          </div>    
+              
+              {% block content %}
+    
+               {% endblock %}
+                <!-- Footer -->
+             <div class="ui inverted vertical footer segment" style="width: 100%; margin:0px;">
+                <div class="ui container">
+                  <div class="ui stackable inverted divided equal height stackable grid">
+                    <div class="three wide column">
+                      <h4 class="ui inverted header">Redes Sociales</h4>
+                      <div class="ui inverted link list" >
+                          
+                        
+                        <a  class="item" href="https://www.facebook.com/aranciahelados"  target="_blank"  style="color:black"  onmouseover="this.style.color='#28527A'" onmouseout="this.style.color='black'"  >  <i class="fab fa-facebook-square" style="size: 7px;"></i></a>                   
+                       
+                           <a  class="item" href="https://www.instagram.com/aranciahelados/?hl=es-la" target="_blank" style="color:black"  onmouseover="this.style.color='#af0069'" onmouseout="this.style.color='black'"  > <i class="fab fa-instagram" style="size: 7px;"></i> </a>                       
+                        
+                      
+                           <a class="item"  href="https://api.whatsapp.com/send?phone=543884762569&data=AbsqGK12tKPUd0-TruHAgp4WjI681Z_ti2rFyzbJu_U-72dTyIkzXUS9oGQ7l5n5ptTDNEa1M1FkYgX43Pxuh6JyqHU1bOkOrl7pWjLz7FAXvSP9B04NjXAURDx5lM-V-6E&source=FB_Ads" target="_blank" style="color:black"  onmouseover="this.style.color='#81b214'" onmouseout="this.style.color='black'"  > <i class="fab fa-whatsapp"  style="size: 7px;"></i> </a>
+                      
+                           <a  class="item" href="https://www.google.com.ar/maps/place/Heladeria+Artesanal+Arancia/@-24.210728,-65.2675737,19.5z/data=!4m7!3m6!1s0x941b061219816c53:0x73641e0e29ad0a47!8m2!3d-24.2105658!4d-65.2672709!9m1!1b1"  target="_blank" style="color:black"  onmouseover="this.style.color='#ffcc29'" onmouseout="this.style.color='black'" > <i class="fas fa-map-marked-alt" style="size: 7px;"></i></a>
+                    
+                         
+                       </div>
+                    </div>
+                    <div class="three wide column">
+                      <h4 class="ui inverted header">Services</h4>
+                      <div class="ui inverted link list">
+                        <a href="#" class="item">Banana Pre-Order</a>
+                        <a href="#" class="item">DNA FAQ</a>
+                        <a href="#" class="item">How To Access</a>
+                        <a href="#" class="item">Favorite X-Men</a>
+                      </div>
+                    </div>
+                    <div class="seven wide column">
+                      <h4 class="ui inverted header">Politicas</h4>
+                      <p class="m-0 mbt">
+                        <a href="sample.html" class="link">Política de privacidad</a> ·
+                        <a href="sample.html" class="link">Aviso legal</a> ·
+                        <a href="sample.html" class="link">Cookies</a>
+                  </p>
+                      <p class="m-0 mbt1">&copy; Gestión de Pedidos 2020</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'StoreOnlineApp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'StoreOnlineApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+
+</html>
